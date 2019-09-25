@@ -71,6 +71,7 @@
         android:layout_height="wrap_content"
         android:text="Add voice note"
 
+
         android:textAllCaps="false"
         android:drawableLeft="@drawable/ic_mic_pink_600_24dp"
         android:background="@color/white"

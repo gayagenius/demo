@@ -6,4 +6,5 @@
     <string name="title_activity_view_note">ViewNoteActivity</string>
     <string name="view_note">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur, at harum laborum minus mollitia natus sunt! Accusantium aliquid assumenda cumque eveniet ex inventore itaque non optio, reiciendis repellendus tenetur?</string>
     <string name="title_activity_edit_note">EditNoteActivity</string>
+    <string name="title_activity_voice_recorder">VoiceRecorderActivity</string>
 </resources>

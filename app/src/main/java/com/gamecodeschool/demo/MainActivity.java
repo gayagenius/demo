@@ -16,6 +16,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import java.io.File;
+import java.io.IOException;
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.media.MediaRecorder;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.gamecodeschool.demo.adapters.NotesAdapter;
 import com.gamecodeschool.demo.database.DatabaseHelper;
@@ -30,12 +45,21 @@ public class MainActivity extends AppCompatActivity {
     ListView squadNames;
     List<Note> notesList;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
+
+
+
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -52,11 +76,10 @@ public class MainActivity extends AppCompatActivity {
          displayNotes();
 
 //         displayNames();
-
-
-
-
     }
+
+
+
     private void displayNotes(){
         DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext(),"notes",null,1);
         notesList = new ArrayList<Note>();
